@@ -1,0 +1,15 @@
+.levelWrap {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.levelWrap img {
+  height: auto;
+  width: 130em;
+}
+
+.levelWrap img:hover {
+  cursor: pointer;
+}

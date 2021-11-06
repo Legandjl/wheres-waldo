@@ -1,0 +1,22 @@
+.homeWrap {
+  background-color: white;
+  display: grid;
+}
+
+.homeImageContainer {
+  width: auto;
+
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+}
+
+.homeImageWrap {
+}
+
+.homeImageWrap img {
+  height: 60em;
+  width: auto;
+}
