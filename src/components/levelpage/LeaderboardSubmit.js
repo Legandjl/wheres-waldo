@@ -28,11 +28,7 @@ const LeaderboardSubmit = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmit(true);
-    try {
-      await context.fb.pushToLeaderboard(name, timeTaken);
-    } catch (err) {
-      console.log(err);
-    }
+    await context.fb.pushToLeaderboard(name, timeTaken);
     nav("/leaderboard", { replace: true });
   };
   return (

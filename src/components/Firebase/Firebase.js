@@ -24,6 +24,7 @@ const Firebase = () => {
   initializeApp(firebaseConfig);
 
   const db = getFirestore();
+
   const publicMethods = {};
   publicMethods.getCharacterLocations = async () => {
     const querySnapshot = await getDocs(collection(db, "characterLocations"));
@@ -32,7 +33,6 @@ const Firebase = () => {
       const current = doc.data().data;
       data.push(...current);
     });
-
     return data;
   };
 
@@ -43,15 +43,17 @@ const Firebase = () => {
     docSnap.forEach((doc) => {
       data.push(doc.data());
     });
+
     return data;
   };
 
   publicMethods.pushToLeaderboard = async (username, time) => {
     console.log("called");
-    await addDoc(collection(db, "leaderboard"), {
+    const docRef = await addDoc(collection(db, "leaderboard"), {
       name: username,
       timetaken: time,
     });
+    return docRef;
   };
 
   publicMethods.getStartTime = () => {

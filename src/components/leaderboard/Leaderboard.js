@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { GameContext } from "../../context/useGameContext";
+import pokeball from "../header/pokeball.png";
 import "./leaderboard.css";
 
 const Leaderboard = () => {
@@ -11,9 +12,11 @@ const Leaderboard = () => {
     return (
       <div key={i}>
         <li>
+          <img alt={"pokeball small"} src={pokeball} />
           <p>{i + 1}: </p>
           <p>{item.name === "" ? "Anonymous" : item.name}</p>
           <p>{item.timetaken} s</p>
+          <img alt={"pokeball small"} src={pokeball} />
         </li>
       </div>
     );
