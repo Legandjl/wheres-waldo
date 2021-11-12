@@ -3,13 +3,131 @@
   justify-items: center;
   justify-content: center;
   align-content: center;
+  grid-row: 2;
+  margin-top: 5em;
 }
 
 .levelWrap img {
   height: auto;
   width: 130em;
+  position: relative;
 }
 
 .levelWrap img:hover {
   cursor: pointer;
+}
+
+.nameMenu {
+  font-size: 1.4em;
+  cursor: pointer;
+  display: grid;
+  z-index: 1;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+.nameMenu p {
+  border: solid #356abc 2px;
+  padding: 8px;
+  border-radius: 9px;
+  background-color: white;
+  text-align: center;
+  margin: 2px;
+  color: #356abc;
+}
+
+.nameMenu p:hover {
+  background-color: #356abc;
+  color: #f6e652;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-color: #f6e652;
+}
+
+.submitWrap {
+  width: 25em;
+  height: 15em;
+  position: fixed;
+  background-color: white;
+  z-index: 2;
+  top: 40vh;
+  bottom: 50vh;
+  left: 40vw;
+  display: grid;
+  padding: 10px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  outline: solid #f6e652 9px;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: #356abc;
+  color: #f6e652;
+
+  text-align: center;
+}
+
+.submitWrap form {
+  display: grid;
+  grid-gap: 5px;
+}
+
+.submitWrap p {
+}
+
+.usernameInput {
+  border: none;
+  color: #f6e652;
+  border: none;
+  outline: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 1.1em;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.usernameInput:active {
+  color: white;
+  border: none;
+  border: none;
+
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+button {
+  outline: solid #f6e652 4px;
+  background-color: #356abc;
+  color: #f6e652;
+  border: none;
+  width: 80%;
+
+  padding: 5px;
+  justify-self: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  border-radius: 9px;
+  font-size: 1.1em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: all ease-in-out 0.06s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: none;
 }

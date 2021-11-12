@@ -1,0 +1,28 @@
+.boardWrap {
+  z-index: 2;
+  grid-row: 2;
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  font-size: 1.8em;
+}
+
+.listWrap {
+  display: grid;
+  max-height: 70vh;
+  overflow-y: scroll;
+  margin-top: 3em;
+  padding: 2em;
+}
+
+.boardWrap li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 10px;
+  color: #356abc;
+}
+
+hr {
+  border-style: solid 2px;
+  border-color: #356abc;
+}

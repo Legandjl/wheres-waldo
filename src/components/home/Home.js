@@ -1,15 +1,15 @@
 import "./Home.css";
-import { ImageContext } from "../../context/imageContext";
+import { GameContext } from "../../context/useGameContext";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const context = useContext(ImageContext);
-  const [currentIndex, setIndex] = useState(0);
+  const context = useContext(GameContext);
+  const [currentIndex] = useState(0);
   //todo - add more images
   const images = context.imageData.map((item) => {
     return (
-      <div key={item.id} className="homeImageWrap">
+      <div key={item.id} className="homeImageContainer">
         <Link to={`/level/${item.id}`}>
           {" "}
           <img alt={"pokemon sprites"} src={item.src} />{" "}
@@ -17,15 +17,8 @@ const Home = () => {
       </div>
     );
   });
-  const switchImage = () => {
-    //if currentindex = 1 current index = 0
-    // if current index = 0 current index = 1
-  };
-  return (
-    <div className="homeWrap">
-      <div className="homeImageContainer">{images[currentIndex]}</div>
-    </div>
-  );
+
+  return <div className="homeWrap">{images[currentIndex]}</div>;
 };
 
 export default Home;

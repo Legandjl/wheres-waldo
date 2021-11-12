@@ -1,11 +1,10 @@
 .homeWrap {
   background-color: white;
   display: grid;
+  grid-row: 2;
 }
 
 .homeImageContainer {
-  width: auto;
-
   justify-self: center;
   align-self: center;
   display: grid;
@@ -13,10 +12,19 @@
   grid-gap: 1em;
 }
 
-.homeImageWrap {
+.homeImageContainer img {
+  width: auto;
+  height: 50em;
 }
 
-.homeImageWrap img {
-  height: 60em;
-  width: auto;
+@media only screen and (min-width: 1600px) {
+  .homeImageContainer {
+    height: 80em;
+    width: auto;
+  }
+
+  .homeImageContainer img {
+    width: auto;
+    height: 80em;
+  }
 }

@@ -3,19 +3,21 @@ import Home from "../home/Home";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "../footer/Footer";
-import { ImageContextProvider } from "../../context/imageContext";
+import { GameContextProvider } from "../../context/useGameContext";
 import Level from "../levelpage/Level";
+import Leaderboard from "../leaderboard/Leaderboard";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <ImageContextProvider>
+      <GameContextProvider>
+        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/level/:id" element={<Level />} />
         </Routes>
-      </ImageContextProvider>
+      </GameContextProvider>
       <Footer />
     </div>
   );
