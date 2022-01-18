@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Photo Tagging App in the style of Wheres Waldo/Wally
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
