@@ -6,4 +6,5 @@ Users need to click around the image to locate the elements displayed in the hea
 
 Uses a firebase backend to store the correct locations of the hidden elements in the main image, and to maintain a high score table of users sorted by the time it took them to find all elements. 
 
+Demo: https://wheres-waldo-7a519.web.app/
 
